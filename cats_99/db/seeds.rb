@@ -10,3 +10,5 @@ Cat.destroy_all
 ApplicationRecord.connection.reset_pk_sequence!("cats")
 
 spot = Cat.create!(name: "Spot", birth_date: "04/12/1995",color: "orange", sex: "M", description: "has four spots") 
+leo = Cat.create!(name: "Leo", birth_date: "15/02/2000",color: "black", sex: "M", description: "is a mean cat")
+sassy = Cat.create!(name: "Sassy", birth_date: "24/12/1996",color: "white", sex: "F", description: "is a cat")
