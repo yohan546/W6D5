@@ -20,6 +20,9 @@ class Cat < ApplicationRecord
     validates :sex, presence: true, inclusion: {in: ["M", "F"]  }
     validates :description, presence: true
     
+    has_many :cat_rentals,
+    foreign_key: :cat_id,
+    class_name: :CatRentalRequest
 
     def age 
         time_ago_in_words(self.birth_date) 
